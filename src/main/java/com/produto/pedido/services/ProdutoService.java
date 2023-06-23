@@ -1,9 +1,8 @@
 package com.produto.pedido.services;
 
-import com.produto.pedido.models.ProdutoModel;
-import com.produto.pedido.models.dtos.ProdutoRecordDTO;
+import com.produto.pedido.models.dtos.ProdutoDTO;
 
 public interface ProdutoService {
 
-	public ProdutoModel novoProduto(ProdutoRecordDTO dto);
+	public ProdutoDTO novoProduto(ProdutoDTO dto);
 }

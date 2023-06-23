@@ -10,7 +10,16 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name="TB_PRODUTO")
 public class ProdutoModel implements Serializable{
@@ -26,30 +35,5 @@ public class ProdutoModel implements Serializable{
 	
 	@Column(name="valor")
 	private BigDecimal valor;
-
-	public UUID getIdProduto() {
-		return idProduto;
-	}
-
-	public void setIdProduto(UUID idProduto) {
-		this.idProduto = idProduto;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-
-	public BigDecimal getValor() {
-		return valor;
-	}
-
-	public void setValor(BigDecimal valor) {
-		this.valor = valor;
-	}
-	
 	
 }
