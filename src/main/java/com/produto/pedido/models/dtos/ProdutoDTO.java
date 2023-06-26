@@ -4,7 +4,8 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.UUID;
 
-import jakarta.persistence.Column;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,10 +20,13 @@ public class ProdutoDTO {
 
 	private UUID idProduto;
 
+	@NotNull
+	@Pattern(regexp = "\\d{13}")
 	private String codigEan;
 	
 	private String codigo;
 	
+	@NotNull
 	private String descricao;
 	
 	private BigDecimal valorVenda;
