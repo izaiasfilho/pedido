@@ -11,8 +11,18 @@ public class ProdutoDtoConverte implements ConverteDtoService<ProdutoDTO, Produt
 	@Override
 	public ProdutoModel converteDTOparaEntidade(ProdutoDTO dto) {
 		if (dto != null) {
-			return ProdutoModel.builder().idProduto(dto.getIdProduto() != null ? dto.getIdProduto() : null)
-					.descricao(dto.getDescricao()).valor(dto.getValor()).build();
+			return ProdutoModel.builder()
+					.idProduto(dto.getIdProduto() != null ? dto.getIdProduto() : null)
+					.descricao(dto.getDescricao())
+					.codigEan(dto.getCodigEan())
+					.codigo(dto.getCodigo())
+					.valorVenda(dto.getValorVenda())
+					.valorCusto(dto.getValorCusto())
+					.valorCompra(dto.getValorCompra())
+					.estoque(dto.getEstoque())
+					.dataCadastro(dto.getDataCadastro())
+					.dataAlteracao(dto.getDataAlteracao())
+					.build();
 		}
 		return null;
 	}
@@ -20,8 +30,18 @@ public class ProdutoDtoConverte implements ConverteDtoService<ProdutoDTO, Produt
 	@Override
 	public ProdutoDTO converteEntidadeParaDTO(ProdutoModel entidade) {
 		if (entidade != null) {
-			return ProdutoDTO.builder().idProduto(entidade.getIdProduto() != null ? entidade.getIdProduto() : null)
-					.descricao(entidade.getDescricao()).valor(entidade.getValor()).build();
+			return ProdutoDTO.builder()
+					.idProduto(entidade.getIdProduto() != null ? entidade.getIdProduto() : null)
+					.descricao(entidade.getDescricao())
+					.codigEan(entidade.getCodigEan())
+					.codigo(entidade.getCodigo())
+					.valorVenda(entidade.getValorVenda())
+					.valorCusto(entidade.getValorCusto())
+					.valorCompra(entidade.getValorCompra())
+					.estoque(entidade.getEstoque())
+					.dataCadastro(entidade.getDataCadastro())
+					.dataAlteracao(entidade.getDataAlteracao())
+					.build();
 		}
 		return null;
 	}
