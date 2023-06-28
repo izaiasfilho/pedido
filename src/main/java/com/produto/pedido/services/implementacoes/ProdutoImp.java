@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 
 import com.produto.pedido.models.ProdutoModel;
 import com.produto.pedido.models.dtos.ProdutoDTO;
-import com.produto.pedido.models.dtos.ProdutoDtoConverte;
 import com.produto.pedido.repositories.ProdutoRepository;
 import com.produto.pedido.services.ProdutoService;
+import com.produto.pedido.services.converter.ProdutoDtoConverte;
 
 import jakarta.transaction.Transactional;
 

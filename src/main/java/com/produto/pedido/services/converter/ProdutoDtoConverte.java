@@ -1,8 +1,9 @@
-package com.produto.pedido.models.dtos;
+package com.produto.pedido.services.converter;
 
 import org.springframework.stereotype.Component;
 
 import com.produto.pedido.models.ProdutoModel;
+import com.produto.pedido.models.dtos.ProdutoDTO;
 import com.produto.pedido.services.ConverteDtoService;
 
 @Component
