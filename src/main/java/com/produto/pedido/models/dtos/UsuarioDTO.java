@@ -25,5 +25,7 @@ private UUID id;
 	private LocalDate dataNascimento;
 	
 	private Boolean status;
+	
+	private UsuarioAtributoDTO atributo;
 		
 }

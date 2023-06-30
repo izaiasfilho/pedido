@@ -1,4 +1,4 @@
-CREATE TABLE TB_PRODUTO (
+CREATE TABLE IF NOT EXISTS TB_PRODUTO (
   id_produto UUID PRIMARY KEY,
   cod_ean VARCHAR(255) UNIQUE,
   cod_produto VARCHAR(255) NOT NULL UNIQUE,
@@ -7,8 +7,8 @@ CREATE TABLE TB_PRODUTO (
   vl_compra DECIMAL(10,2),
   vl_custo DECIMAL(10,2),
   qtd_estoque DECIMAL(10,2),
-  dt_cadastro DATE,
-  dt_alteracao DATE
+  dt_cadastro TIMESTAMP NOT NULL,
+  dt_alteracao TIMESTAMP NOT NULL
 );
 
 -- Criação dos índices
