@@ -26,6 +26,5 @@ private UUID id;
 	
 	private Boolean status;
 	
-	private UsuarioAtributoDTO atributo;
 		
 }

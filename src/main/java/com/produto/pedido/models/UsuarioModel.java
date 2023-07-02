@@ -47,7 +47,5 @@ public class UsuarioModel implements Serializable {
     @Column(name = "status")
     private Boolean status;
 
-    @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
-    private UsuarioAtributoModel atributo;
 
 }

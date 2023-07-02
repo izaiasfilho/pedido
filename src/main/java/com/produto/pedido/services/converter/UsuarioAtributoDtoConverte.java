@@ -2,17 +2,17 @@ package com.produto.pedido.services.converter;
 
 import org.springframework.stereotype.Component;
 
-import com.produto.pedido.models.ProdutoModel;
-import com.produto.pedido.models.dtos.ProdutoDTO;
+import com.produto.pedido.models.UsuarioAtributoModel;
+import com.produto.pedido.models.dtos.UsuarioAtributoDTO;
 import com.produto.pedido.services.ConverteDtoService;
 
 @Component
-public class ProdutoDtoConverte implements ConverteDtoService<ProdutoDTO, ProdutoModel> {
+public class UsuarioAtributoDtoConverte implements ConverteDtoService<UsuarioAtributoDTO, UsuarioAtributoModel> {
 
 	@Override
-	public ProdutoModel converteDTOparaEntidade(ProdutoDTO dto) {
+	public UsuarioAtributoModel converteDTOparaEntidade(UsuarioAtributoDTO dto) {
 		if (dto != null) {
-			return ProdutoModel.builder()
+			return UsuarioAtributoModel.builder()
 					.idProduto(dto.getIdProduto() != null ? dto.getIdProduto() : null)
 					.descricao(dto.getDescricao())
 					.codigEan(dto.getCodigEan())
@@ -29,9 +29,9 @@ public class ProdutoDtoConverte implements ConverteDtoService<ProdutoDTO, Produt
 	}
 
 	@Override
-	public ProdutoDTO converteEntidadeParaDTO(ProdutoModel entidade) {
+	public UsuarioAtributoDTO converteEntidadeParaDTO(UsuarioAtributoModel entidade) {
 		if (entidade != null) {
-			return ProdutoDTO.builder()
+			return UsuarioAtributoDTO.builder()
 					.idProduto(entidade.getIdProduto() != null ? entidade.getIdProduto() : null)
 					.descricao(entidade.getDescricao())
 					.codigEan(entidade.getCodigEan())

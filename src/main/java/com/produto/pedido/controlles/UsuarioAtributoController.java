@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.produto.pedido.models.dtos.ProdutoDTO;
-import com.produto.pedido.services.ProdutoService;
+import com.produto.pedido.models.dtos.UsuarioAtributoDTO;
+import com.produto.pedido.services.UsuarioAtributoService;
 
 import jakarta.validation.Valid;
 
 @RestController
-public class ProdutoController {
+public class UsuarioAtributoController {
 
 	@Autowired
-	ProdutoService service;
+	UsuarioAtributoService service;
 	
 	@PostMapping("/produtos")
-	public ResponseEntity<ProdutoDTO> saveProduto(@RequestBody @Valid ProdutoDTO dto){
+	public ResponseEntity<UsuarioAtributoDTO> saveProduto(@RequestBody @Valid UsuarioAtributoDTO dto){
 		return ResponseEntity.status(HttpStatus.CREATED).body(service.novoProduto(dto));
 	}
 }
