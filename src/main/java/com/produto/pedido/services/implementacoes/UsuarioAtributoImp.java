@@ -1,5 +1,7 @@
 package com.produto.pedido.services.implementacoes;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,9 +25,15 @@ public class UsuarioAtributoImp implements UsuarioAtributoService{
 	private UsuarioAtributoDtoConverte produtoDtoConverte;
 	
 	@Override
-	public UsuarioAtributoDTO novoProduto(UsuarioAtributoDTO dto) {
+	public UsuarioAtributoDTO novo(UsuarioAtributoDTO dto) {
 		UsuarioAtributoModel produuto = repository.save(produtoDtoConverte.converteDTOparaEntidade(dto));
 		return produtoDtoConverte.converteEntidadeParaDTO(produuto);
+	}
+
+	@Override
+	public List<UsuarioAtributoDTO> listUsuarios() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 

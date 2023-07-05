@@ -13,14 +13,8 @@ public class UsuarioAtributoDtoConverte implements ConverteDtoService<UsuarioAtr
 	public UsuarioAtributoModel converteDTOparaEntidade(UsuarioAtributoDTO dto) {
 		if (dto != null) {
 			return UsuarioAtributoModel.builder()
-					.idProduto(dto.getIdProduto() != null ? dto.getIdProduto() : null)
-					.descricao(dto.getDescricao())
-					.codigEan(dto.getCodigEan())
-					.codigo(dto.getCodigo())
-					.valorVenda(dto.getValorVenda())
-					.valorCusto(dto.getValorCusto())
-					.valorCompra(dto.getValorCompra())
-					.estoque(dto.getEstoque())
+					.id(dto.getId() != null ? dto.getId() : null)
+					.idUsuario(dto.getIdUsuario())
 					.dataCadastro(dto.getDataCadastro())
 					.dataAlteracao(dto.getDataAlteracao())
 					.build();
@@ -32,14 +26,8 @@ public class UsuarioAtributoDtoConverte implements ConverteDtoService<UsuarioAtr
 	public UsuarioAtributoDTO converteEntidadeParaDTO(UsuarioAtributoModel entidade) {
 		if (entidade != null) {
 			return UsuarioAtributoDTO.builder()
-					.idProduto(entidade.getIdProduto() != null ? entidade.getIdProduto() : null)
-					.descricao(entidade.getDescricao())
-					.codigEan(entidade.getCodigEan())
-					.codigo(entidade.getCodigo())
-					.valorVenda(entidade.getValorVenda())
-					.valorCusto(entidade.getValorCusto())
-					.valorCompra(entidade.getValorCompra())
-					.estoque(entidade.getEstoque())
+					.id(entidade.getId() != null ? entidade.getId() : null)
+					.idUsuario(entidade.getIdUsuario())
 					.dataCadastro(entidade.getDataCadastro())
 					.dataAlteracao(entidade.getDataAlteracao())
 					.build();

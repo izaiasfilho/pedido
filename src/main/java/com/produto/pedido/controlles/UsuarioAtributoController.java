@@ -18,8 +18,8 @@ public class UsuarioAtributoController {
 	@Autowired
 	UsuarioAtributoService service;
 	
-	@PostMapping("/produtos")
-	public ResponseEntity<UsuarioAtributoDTO> saveProduto(@RequestBody @Valid UsuarioAtributoDTO dto){
-		return ResponseEntity.status(HttpStatus.CREATED).body(service.novoProduto(dto));
+	@PostMapping("/usuarioatributo")
+	public ResponseEntity<UsuarioAtributoDTO> save(@RequestBody @Valid UsuarioAtributoDTO dto){
+		return ResponseEntity.status(HttpStatus.CREATED).body(service.novo(dto));
 	}
 }
