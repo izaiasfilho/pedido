@@ -2,17 +2,17 @@ package com.produto.pedido.services.converter;
 
 import org.springframework.stereotype.Component;
 
-import com.produto.pedido.models.UsuarioModel;
+import com.produto.pedido.models.Usuario;
 import com.produto.pedido.models.dtos.UsuarioDTO;
 import com.produto.pedido.services.ConverteDtoService;
 
 @Component
-public class UsuarioDtoConverte implements ConverteDtoService<UsuarioDTO, UsuarioModel> {
+public class UsuarioDtoConverte implements ConverteDtoService<UsuarioDTO, Usuario> {
 
 	@Override
-	public UsuarioModel converteDTOparaEntidade(UsuarioDTO dto) {
+	public Usuario converteDTOparaEntidade(UsuarioDTO dto) {
 		if (dto != null) {
-			return UsuarioModel.builder()
+			return Usuario.builder()
 					.id(dto.getId() != null ? dto.getId() : null)
 					.nome(dto.getNome())
 					.cpf(dto.getCpf())
@@ -25,7 +25,7 @@ public class UsuarioDtoConverte implements ConverteDtoService<UsuarioDTO, Usuari
 	}
 
 	@Override
-	public UsuarioDTO converteEntidadeParaDTO(UsuarioModel entidade) {
+	public UsuarioDTO converteEntidadeParaDTO(Usuario entidade) {
 		if (entidade != null) {
 			return UsuarioDTO.builder()
 					.id(entidade.getId()!= null ? entidade.getId() : null)

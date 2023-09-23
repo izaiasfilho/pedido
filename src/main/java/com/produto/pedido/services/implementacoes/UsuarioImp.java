@@ -3,7 +3,7 @@ package com.produto.pedido.services.implementacoes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.produto.pedido.models.UsuarioModel;
+import com.produto.pedido.models.Usuario;
 import com.produto.pedido.models.dtos.UsuarioDTO;
 import com.produto.pedido.repositories.UsuarioRepository;
 import com.produto.pedido.services.UsuarioService;
@@ -24,7 +24,7 @@ public class UsuarioImp implements UsuarioService{
 	
 	@Override
 	public UsuarioDTO novoUsuario(UsuarioDTO dto) {
-		UsuarioModel usuario = repository.save(usuarioDtoConverte.converteDTOparaEntidade(dto));
+		Usuario usuario = repository.save(usuarioDtoConverte.converteDTOparaEntidade(dto));
 		return usuarioDtoConverte.converteEntidadeParaDTO(usuario);
 	}
 

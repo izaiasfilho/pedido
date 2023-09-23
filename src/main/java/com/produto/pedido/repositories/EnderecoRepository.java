@@ -4,8 +4,8 @@ import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.produto.pedido.models.Usuario;
+import com.produto.pedido.models.Endereco;
 
-public interface UsuarioRepository extends JpaRepository<Usuario, UUID>{
+public interface EnderecoRepository extends JpaRepository<Endereco, UUID>{
 
 }

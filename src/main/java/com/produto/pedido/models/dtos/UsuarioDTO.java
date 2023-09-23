@@ -1,6 +1,7 @@
 package com.produto.pedido.models.dtos;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.UUID;
 
 import lombok.AllArgsConstructor;
@@ -25,6 +26,10 @@ private UUID id;
 	private LocalDate dataNascimento;
 	
 	private Boolean status;
+	
+	private UsuarioAtributoDTO usuarioAtributoDTO;
+	
+	private List<UsuarioAtributoDTO> listaUsuarioAtributoDTO;
 	
 		
 }

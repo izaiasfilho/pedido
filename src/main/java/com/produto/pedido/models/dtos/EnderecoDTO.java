@@ -1,6 +1,5 @@
 package com.produto.pedido.models.dtos;
 
-import java.time.LocalDate;
 import java.util.UUID;
 
 import lombok.AllArgsConstructor;
@@ -13,15 +12,15 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UsuarioAtributoDTO {
+public class EnderecoDTO {
 
 	private UUID id;
-
-	private UUID idUsuario;
 	
-	private LocalDate dataCadastro;
+	private String logradouro;
 	
-	private LocalDate dataAlteracao;
+	private Long numero;
 	
-	private EnderecoDTO enderecoDTO;
+	private String complemento;
+	
+	private CidadeDTO cidadeDTO;
 }
