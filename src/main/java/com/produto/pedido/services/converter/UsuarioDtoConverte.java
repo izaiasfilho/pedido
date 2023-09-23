@@ -19,6 +19,7 @@ public class UsuarioDtoConverte implements ConverteDtoService<UsuarioDTO, Usuari
 					.dataNascimento(dto.getDataNascimento())
 					.email(dto.getEmail())
 					.status(dto.getStatus())
+					.atributo(dto.getUsuarioAtributo())
 					.build();
 		}
 		return null;

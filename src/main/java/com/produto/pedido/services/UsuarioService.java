@@ -4,5 +4,5 @@ import com.produto.pedido.models.dtos.UsuarioDTO;
 
 public interface UsuarioService {
 
-	public UsuarioDTO novoUsuario(UsuarioDTO dto);
+	public void inserir(UsuarioDTO dto);
 }

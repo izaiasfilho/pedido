@@ -19,7 +19,9 @@ public class UsuarioController {
 	UsuarioService service;
 	
 	@PostMapping("/usuarios")
-	public ResponseEntity<UsuarioDTO> saveProduto(@RequestBody @Valid UsuarioDTO dto){
-		return ResponseEntity.status(HttpStatus.CREATED).body(service.novoUsuario(dto));
+	public ResponseEntity<Void> saveUsuario(@RequestBody @Valid UsuarioDTO dto) {
+	    service.inserir(dto);
+	    return ResponseEntity.status(HttpStatus.CREATED).build();
 	}
+
 }
