@@ -39,7 +39,7 @@ public class Endereco implements Serializable {
     private String complemento;
 
     @ManyToOne
-    @JoinColumn(name = "id_usuario_atributo") 
+    @JoinColumn(name = "id_usuario_atributo")
     private UsuarioAtributo userAttribute;
 
     @ManyToOne

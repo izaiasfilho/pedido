@@ -14,7 +14,7 @@ public class UsuarioAtributoDtoConverte implements ConverteDtoService<UsuarioAtr
 		if (dto != null) {
 			return UsuarioAtributo.builder()
 					.id(dto.getId() != null ? dto.getId() : null)
-					.idUsuario(dto.getIdUsuario())
+					.usuario(dto.getUsuario())
 					.dataCadastro(dto.getDataCadastro())
 					.dataAlteracao(dto.getDataAlteracao())
 					.build();
@@ -27,7 +27,7 @@ public class UsuarioAtributoDtoConverte implements ConverteDtoService<UsuarioAtr
 		if (entidade != null) {
 			return UsuarioAtributoDTO.builder()
 					.id(entidade.getId() != null ? entidade.getId() : null)
-					.idUsuario(entidade.getIdUsuario())
+					.usuario(entidade.getUsuario())
 					.dataCadastro(entidade.getDataCadastro())
 					.dataAlteracao(entidade.getDataAlteracao())
 					.build();

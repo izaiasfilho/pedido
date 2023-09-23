@@ -3,6 +3,8 @@ package com.produto.pedido.models.dtos;
 import java.time.LocalDate;
 import java.util.UUID;
 
+import com.produto.pedido.models.Usuario;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,7 +19,7 @@ public class UsuarioAtributoDTO {
 
 	private UUID id;
 
-	private UUID idUsuario;
+	private Usuario usuario;
 	
 	private LocalDate dataCadastro;
 	
