@@ -1,0 +1,31 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+INSERT INTO public.tb_estado (id, ds_sigla, ds_estado)
+VALUES
+   (uuid_generate_v4(), 'AC', 'Acre'),
+   (uuid_generate_v4(), 'AL', 'Alagoas'),
+   (uuid_generate_v4(), 'AP', 'Amapá'),
+   (uuid_generate_v4(), 'AM', 'Amazonas'),
+   (uuid_generate_v4(), 'BA', 'Bahia'),
+   (uuid_generate_v4(), 'CE', 'Ceará'),
+   (uuid_generate_v4(), 'DF', 'Distrito Federal'),
+   (uuid_generate_v4(), 'ES', 'Espírito Santo'),
+   (uuid_generate_v4(), 'GO', 'Goiás'),
+   (uuid_generate_v4(), 'MA', 'Maranhão'),
+   (uuid_generate_v4(), 'MT', 'Mato Grosso'),
+   (uuid_generate_v4(), 'MS', 'Mato Grosso do Sul'),
+   (uuid_generate_v4(), 'MG', 'Minas Gerais'),
+   (uuid_generate_v4(), 'PA', 'Pará'),
+   (uuid_generate_v4(), 'PB', 'Paraíba'),
+   (uuid_generate_v4(), 'PR', 'Paraná'),
+   (uuid_generate_v4(), 'PE', 'Pernambuco'),
+   (uuid_generate_v4(), 'PI', 'Piauí'),
+   (uuid_generate_v4(), 'RJ', 'Rio de Janeiro'),
+   (uuid_generate_v4(), 'RN', 'Rio Grande do Norte'),
+   (uuid_generate_v4(), 'RS', 'Rio Grande do Sul'),
+   (uuid_generate_v4(), 'RO', 'Rondônia'),
+   (uuid_generate_v4(), 'RR', 'Roraima'),
+   (uuid_generate_v4(), 'SC', 'Santa Catarina'),
+   (uuid_generate_v4(), 'SP', 'São Paulo'),
+   (uuid_generate_v4(), 'SE', 'Sergipe'),
+   (uuid_generate_v4(), 'TO', 'Tocantins');
