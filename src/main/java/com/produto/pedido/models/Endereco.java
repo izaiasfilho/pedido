@@ -28,6 +28,9 @@ public class Endereco implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
+    
+    @Column(name = "cep")
+    private String cep;
 
     @Column(name = "ds_logradouro")
     private String logradouro;

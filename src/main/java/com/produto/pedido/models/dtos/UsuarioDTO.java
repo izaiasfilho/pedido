@@ -22,7 +22,7 @@ public class UsuarioDTO {
     private String email;
     private LocalDate dataNascimento;
     private Boolean status;
-    private UsuarioAtributo usuarioAtributo;
+    private UsuarioAtributoDTO usuarioAtributoDTO;
     private List<UsuarioAtributo> listaUsuarioAtributo;
 }
 

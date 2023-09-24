@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.produto.pedido.models.UsuarioAtributo;
 import com.produto.pedido.models.dtos.UsuarioAtributoDTO;
 import com.produto.pedido.repositories.UsuarioAtributoRepository;
 import com.produto.pedido.services.UsuarioAtributoService;
@@ -22,12 +21,11 @@ public class UsuarioAtributoImp implements UsuarioAtributoService{
 	
 	
 	@Autowired
-	private UsuarioAtributoDtoConverte produtoDtoConverte;
+	private UsuarioAtributoDtoConverte usuarioAtributoDtoConverte;
 	
 	@Override
-	public UsuarioAtributoDTO novo(UsuarioAtributoDTO dto) {
-		UsuarioAtributo produuto = repository.save(produtoDtoConverte.converteDTOparaEntidade(dto));
-		return produtoDtoConverte.converteEntidadeParaDTO(produuto);
+	public void inserir(UsuarioAtributoDTO dto) {
+		repository.save(usuarioAtributoDtoConverte.converteDTOparaEntidade(dto));
 	}
 
 	@Override

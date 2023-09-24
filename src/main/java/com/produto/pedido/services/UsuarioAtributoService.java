@@ -6,7 +6,7 @@ import com.produto.pedido.models.dtos.UsuarioAtributoDTO;
 
 public interface UsuarioAtributoService {
 
-	public UsuarioAtributoDTO novo(UsuarioAtributoDTO dto);
+	public void inserir(UsuarioAtributoDTO dto);
 	
 	public List<UsuarioAtributoDTO> listUsuarios();
 }

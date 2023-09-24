@@ -9,8 +9,10 @@ import com.produto.pedido.services.ConverteDtoService;
 @Component
 public class UsuarioDtoConverte implements ConverteDtoService<UsuarioDTO, Usuario> {
 
+
 	@Override
 	public Usuario converteDTOparaEntidade(UsuarioDTO dto) {
+		
 		if (dto != null) {
 			return Usuario.builder()
 					.id(dto.getId() != null ? dto.getId() : null)
@@ -19,7 +21,6 @@ public class UsuarioDtoConverte implements ConverteDtoService<UsuarioDTO, Usuari
 					.dataNascimento(dto.getDataNascimento())
 					.email(dto.getEmail())
 					.status(dto.getStatus())
-					.atributo(dto.getUsuarioAtributo())
 					.build();
 		}
 		return null;

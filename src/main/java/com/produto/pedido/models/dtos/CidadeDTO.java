@@ -15,5 +15,6 @@ public class CidadeDTO {
 
     private UUID id;
     private String descricaoCidade;
-    private EstadoDTO estado;
+    private String bairro;
+    private EstadoDTO estadoDTO;
 }

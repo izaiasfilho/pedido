@@ -9,6 +9,7 @@ CREATE TABLE TB_ESTADO (
 CREATE TABLE TB_CIDADE (
     id UUID PRIMARY KEY,
     ds_cidade VARCHAR(255),
+    ds_bairro VARCHAR(255),
     id_estado UUID,
     FOREIGN KEY (id_estado) REFERENCES TB_ESTADO(id)
 );
@@ -36,6 +37,7 @@ CREATE TABLE TB_USUARIO_ATRIBUTO (
 CREATE TABLE TB_ENDERECO (
     id UUID PRIMARY KEY,
     ds_logradouro VARCHAR(255),
+    cep VARCHAR(255),
     numero BIGINT,
     ds_complemento VARCHAR(255),
     id_usuario_atributo UUID,

@@ -1,6 +1,7 @@
 package com.produto.pedido.models.dtos;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.UUID;
 
 import com.produto.pedido.models.Usuario;
@@ -25,5 +26,5 @@ public class UsuarioAtributoDTO {
 	
 	private LocalDate dataAlteracao;
 	
-	private EnderecoDTO enderecoDTO;
+	private List<EnderecoDTO> listEnderecoDTO;
 }

@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.produto.pedido.models.Endereco;
 import com.produto.pedido.models.dtos.EnderecoDTO;
 import com.produto.pedido.repositories.EnderecoRepository;
 import com.produto.pedido.services.EnderecoService;
@@ -20,20 +19,20 @@ public class EnderecoImp implements EnderecoService{
 	@Autowired
 	EnderecoRepository repository;
 	
-	
 	@Autowired
-	private EnderecoDtoConverte enderecoDtoConverte;
+	EnderecoDtoConverte endercoDtoConverte;
 	
 	@Override
-	public EnderecoDTO novo(EnderecoDTO dto) {
-		Endereco produuto = repository.save(enderecoDtoConverte.converteDTOparaEntidade(dto));
-		return enderecoDtoConverte.converteEntidadeParaDTO(produuto);
+	public void inserir(EnderecoDTO enderecoDTO) {
+	 repository.save(endercoDtoConverte.converteDTOparaEntidade(enderecoDTO));
 	}
 
 	@Override
 	public List<EnderecoDTO> listEndereco() {
 		return null;
 	}
+
+
 
 
 }

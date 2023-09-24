@@ -6,7 +6,7 @@ import com.produto.pedido.models.dtos.EnderecoDTO;
 
 public interface EnderecoService {
 
-	public EnderecoDTO novo(EnderecoDTO dto);
+	public void inserir(EnderecoDTO enderecoDTO);
 	
 	public List<EnderecoDTO> listEndereco();
 }

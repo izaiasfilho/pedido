@@ -31,6 +31,9 @@ public class Cidade implements Serializable {
 
     @Column(name = "ds_cidade")
     private String descricaoCidade;
+    
+    @Column(name = "ds_bairro")
+    private String bairro;
 
     @ManyToOne
     @JoinColumn(name = "id_estado") 

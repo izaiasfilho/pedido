@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.UUID;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -42,9 +41,6 @@ public class Usuario implements Serializable {
 
 	    @Column(name = "dt_nascimento")
 	    private LocalDate dataNascimento;
-
-	    @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
-	    private UsuarioAtributo atributo;
 
 	    @Column(name = "status")
 	    private Boolean status;
