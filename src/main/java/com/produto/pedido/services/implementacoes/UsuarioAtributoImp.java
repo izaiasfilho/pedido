@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.produto.pedido.models.UsuarioAtributo;
 import com.produto.pedido.models.dtos.UsuarioAtributoDTO;
 import com.produto.pedido.repositories.UsuarioAtributoRepository;
 import com.produto.pedido.services.UsuarioAtributoService;
@@ -24,13 +25,13 @@ public class UsuarioAtributoImp implements UsuarioAtributoService{
 	private UsuarioAtributoDtoConverte usuarioAtributoDtoConverte;
 	
 	@Override
-	public void inserir(UsuarioAtributoDTO dto) {
-		repository.save(usuarioAtributoDtoConverte.converteDTOparaEntidade(dto));
+	public UsuarioAtributo  inserir(UsuarioAtributoDTO dto) {
+		return repository.save(usuarioAtributoDtoConverte.converteDTOparaEntidade(dto));
 	}
 
 	@Override
 	public List<UsuarioAtributoDTO> listUsuarios() {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 

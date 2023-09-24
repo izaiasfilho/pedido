@@ -19,10 +19,12 @@ public class EnderecoDtoConverte implements ConverteDtoService<EnderecoDTO, Ende
 		if (dto != null) {
 			return Endereco.builder()
 					.id(dto.getId() != null ? dto.getId() : null)
+					.cep(dto.getCep())
 					.logradouro(dto.getLogradouro())
 					.complemento(dto.getComplemento())
 					.numero(dto.getNumero())
 	                .cidade(cidadeService.inserir(dto.getCidadeDTO()))
+	                .userAttribute(dto.getUserAttribute())
 					.build();
 		}
 		return null;
