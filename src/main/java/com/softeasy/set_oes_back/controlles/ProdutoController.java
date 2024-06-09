@@ -1,4 +1,6 @@
-package com.produto.pedido.controlles;
+package com.softeasy.set_oes_back.controlles;
+
+
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,9 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.produto.pedido.models.ProdutoModel;
-import com.produto.pedido.models.dtos.ProdutoRecordDTO;
-import com.produto.pedido.repositories.ProdutoRepository;
+import com.softeasy.set_oes_back.models.ProdutoModel;
+import com.softeasy.set_oes_back.models.dtos.ProdutoRecordDTO;
+import com.softeasy.set_oes_back.repositories.ProdutoRepository;
 
 import jakarta.validation.Valid;
 

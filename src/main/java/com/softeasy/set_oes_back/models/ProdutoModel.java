@@ -1,4 +1,6 @@
-package com.produto.pedido.models;
+package com.softeasy.set_oes_back.models;
+
+
 
 import java.io.Serializable;
 import java.math.BigDecimal;

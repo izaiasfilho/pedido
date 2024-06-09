@@ -1,4 +1,6 @@
-package com.produto.pedido.models.dtos;
+package com.softeasy.set_oes_back.models.dtos;
+
+
 
 import java.math.BigDecimal;
 
